@@ -1,15 +1,16 @@
-def normal(x):
-    return x
-
 def cuadrado(x):
     return x*x
 
-def sumaTodos(limitTo, f=normal):
+def cubo(x):
+    return x**3
+
+def sumaTodos(limitTo, f=lambda x: x):
     resultado = 0
     for i in range(1, limitTo+1):
         resultado += f(i)
         
     return resultado
 
-print(sumaTodos(100))
-print(sumaTodos(3, cuadrado))
+if __name__ == '__main__':
+    print(sumaTodos(100))
+    print(sumaTodos(3, cuadrado))
